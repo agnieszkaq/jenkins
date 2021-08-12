@@ -1,0 +1,10 @@
+---
+- name: Show hosts IP
+  hosts: allhosts
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Show IP
+      debug:
+        msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}" 
