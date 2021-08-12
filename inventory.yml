@@ -1,5 +1,5 @@
-ubuntu ansible_host=ubuntu@192.168.122.224 ansible_connection=ssh ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python3 
-centos ansible_host=centos@192.168.122.212 ansible_connection=ssh ansible_user=centos
+ubuntu ansible_host=ubuntu@192.168.122.224 ansible_python_interpreter=/usr/bin/python3 
+centos ansible_host=centos@192.168.122.212 
 
 [allhosts]
 ubuntu 
