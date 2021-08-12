@@ -8,3 +8,8 @@
     - name: Show IP
       debug:
         msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}" 
+     - name: Creates directory
+       file:
+        path: /home/ansible
+        state: directory
+        mode: '777'
