@@ -1,4 +1,4 @@
- ---
+---
 - name: INSTALL ON HOST UBUNTU
   hosts: ubuntu
   become: yes
