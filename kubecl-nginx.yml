@@ -21,3 +21,10 @@
   #iNSTALL MINIKUBE
     - name: Zainstaluj minikube
       shell: install minikube /usr/local/bin/
+      
+    - name: Start minikube
+      shell: minikube start --driver=docker
+      
+    - name: Show minikube status
+      shell: minikube status
+
