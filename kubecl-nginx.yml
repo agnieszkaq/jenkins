@@ -13,4 +13,11 @@
     - name: Install minikube
       shell: 
         "curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \ && chmod +x minikube "
-     
+  #Create dir
+    - name: Creates directory
+      file:
+        path: /usr/local/bin/
+        state: directory
+  #iNSTALL MINIKUBE
+    - name: Zainstaluj minikube
+      shell: install minikube /usr/local/bin/
