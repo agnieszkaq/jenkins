@@ -23,7 +23,7 @@
       shell: install minikube /usr/local/bin/
       
     - name: Start minikube
-      shell: minikube start --driver=docker
+      shell: minikube start --driver=none
       
     - name: Show minikube status
       shell: minikube status
