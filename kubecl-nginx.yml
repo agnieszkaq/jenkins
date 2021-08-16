@@ -14,5 +14,5 @@
       shell:  minikube start --driver=docker
       
     - name: Show minikube status
-      shell: minikube status
+      command: minikube status
 
