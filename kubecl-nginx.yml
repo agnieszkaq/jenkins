@@ -1,26 +1,14 @@
 ---
 - name: INSTALL ON MINIKUBE UBUNTU
   hosts: ubuntu
-  become: yes
+  become: no
   #SETUP MODULE 
   gather_facts: yes
 
   tasks:
     - name: Show IP
       debug:
-        msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}" 
-  # Install minikube
-    - name: Install minikube
-      shell: 
-        "curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \ && chmod +x minikube "
- #Create dir
-    - name: Creates directory
-      file:
-        path: /usr/local/bin/
-        state: directory
-  #iNSTALL MINIKUBE
-    - name: Zainstaluj minikube
-      shell: install minikube /usr/local/bin/
+        msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}"
       
     - name: Start minikube
       shell:  minikube start --driver=docker
