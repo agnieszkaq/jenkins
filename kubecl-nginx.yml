@@ -11,9 +11,9 @@
         msg: "Your host is {{ ansible_host }} IP {{ ansible_all_ipv4_addresses }}" 
   # Install minikube
     - name: Install minikube
-      shell: curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \ && chmod +x minikube
+      shell: 
+        "curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \ && chmod +x minikube "
       
-  # Create diretory
     - name: Creates directory
       file:
       path: /usr/local/bin/
